@@ -11,13 +11,15 @@ public class SummaAvTre {
 		System.out.print("Ange ett tresiffrigt tal: ");
 		int tal = scan.nextInt();
 		int number1 = tal / 100;
-		tal = tal % 100;
+		tal = tal % 100; // remove the first number
 		int number2 = tal / 10;
 		int number3 = tal % 10;
 		
 		int total = number1+number2+number3;
 	
 		System.out.println("Summan av de tre enskilda talen blir: " + number1 +" " +number2 +" " +number3 + " = " +total );
+		
+		scan.close();
 
 
 	}

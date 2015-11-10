@@ -14,6 +14,8 @@ public class BMI {
 		
 		int BMI = (int) (weight/(height*height));
 		System.out.println("Ditt BMI är: " + BMI);
+		
+		scan.close();
 
 	}
 

@@ -15,6 +15,8 @@ public class Tid {
 		int hours = totalMinutes / 60;
 		
 		System.out.println("Detta motsvarar: " + hours + " timmar, " +minutes + " minuter, " + seconds + " sekunder");
+		
+		scan.close();
 
 
 	}
