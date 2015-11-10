@@ -1,5 +1,6 @@
 package fs222mh_lab1;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Avstand {
@@ -9,17 +10,20 @@ public class Avstand {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.print("Ange koordidat X1: ");
-		int x1 = scan.nextInt();
+		double x1 = scan.nextDouble();
 		System.out.print("Ange koordinat Y1: ");
-		int y1 = scan.nextInt();
+		double y1 = scan.nextDouble();
 		System.out.print("Ange koordidat X2: ");
-		int x2 = scan.nextInt();
+		double x2 = scan.nextDouble();
 		System.out.print("Ange koordinat Y2: ");
-		int y2 = scan.nextInt();
+		double y2 = scan.nextDouble();
 		
-		double avstand = Math.sqrt((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2));
+		double avstand = Math.sqrt(((x1-x2)*(x1-x2)) + ((y1-y2)*(y1-y2)));
 		
-		System.out.println("Avståndet mellan punkerna är: "+avstand);
+		DecimalFormat dFormat = new DecimalFormat("0.###");
+		String svar = dFormat.format(avstand);
+		
+		System.out.println("Avståndet mellan punkerna är: "+svar);
 		
 		scan.close();
 
