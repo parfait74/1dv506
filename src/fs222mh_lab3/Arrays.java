@@ -108,7 +108,7 @@ public class Arrays {
 	}
 	
 	private static boolean hasSubSequence(int[] arr, int[] sub) {
-		boolean ok = true;
+		boolean ok = false;
 
 			for (int i = 0; i <= arr.length - sub.length; i += 1) {
 				ok = true;
