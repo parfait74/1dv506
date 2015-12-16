@@ -22,6 +22,9 @@ public class Arrays {
 		replaceAll(data, old, nw);
 		
 		System.out.print(toString(sort(data)) + "\n" );
+		
+		int[] sub = {9,5,2};
+		System.out.print(hasSubSequence(data, sub));
 
 
 	}
@@ -105,14 +108,22 @@ public class Arrays {
 	}
 	
 	private static boolean hasSubSequence(int[] arr, int[] sub) {
-		
-			for (int i = 0; i < arr.length; i += 1) {
-			if (arr.length - i > sub.length || arr[i] == sub[0]) {
-				
-				
+		boolean ok = true;
+
+			for (int i = 0; i <= arr.length - sub.length; i += 1) {
+				ok = true;
+				for (int j = 0; j < sub.length; j += 1) {
+					if (arr[i+j] != sub[j]) {
+						ok = false;
+						break;		
+					}
 				}
 			}
-		
+			if (ok) {
+				return true;
+			} else {
+				return false;
+			}
 	}
 	
 	
