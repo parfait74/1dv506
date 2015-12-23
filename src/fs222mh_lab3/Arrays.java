@@ -89,7 +89,7 @@ public class Arrays {
 	
 	private static int[] sort(int[] arr) {
 		int[] sortedArr = new int[arr.length];
-		
+		int[] tmpArr = new int[1];
 		//Copy original copy to keep original
 		for (int i = 0; i < arr.length; i += 1) {
 			sortedArr[i] = arr[i];
@@ -97,9 +97,9 @@ public class Arrays {
 		
 		for (int i = 1; i < sortedArr.length; i += 1) {
 			if ( sortedArr[i] < sortedArr[i-1]) {
-				sortedArr[i] = sortedArr[i] + sortedArr[i-1];
-				sortedArr[i-1] = sortedArr[i] - sortedArr[i-1];
-				sortedArr[i] = sortedArr[i] - sortedArr[i-1];
+				tmpArr[0] = sortedArr[i-1];
+				sortedArr[i-1] = sortedArr[i];
+				sortedArr[i] = tmpArr[0];
 				i = 0;					// to loop through/back to beginning of array
 				
 			}
