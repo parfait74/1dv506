@@ -13,7 +13,7 @@ public class Card {
 		this.rank = rank;
 	}
 	
-	public String toString() {								// Skriver ut vilket kort som en sträng beroende på position i array
+	public String toString() {								
 		return (ranks[rank] + " of " + suits[suit]);
 	}
 	
